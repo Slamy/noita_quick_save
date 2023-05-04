@@ -1,0 +1,5 @@
+psutil
+pyautogui
+system_hotkey
+xcffib
+xpybutil
