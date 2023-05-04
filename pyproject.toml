@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "noitaquicksave"
+version = "0.1.0"
+description = ""
+authors = ["Andre Zeps <andre.zeps@googlemail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.9"
+psutil = "*"
+pyautogui = "*"
+system_hotkey = "*"
+xcffib = "*"
+xpybutil = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
