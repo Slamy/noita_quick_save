@@ -1,5 +1,5 @@
 psutil
-pyautogui
 system_hotkey
-xcffib
-xpybutil
+pypiwin32; sys_platform == 'win32'
+xcffib; sys_platform == 'linux'
+xpybutil; sys_platform == 'linux'
