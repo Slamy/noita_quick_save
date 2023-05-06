@@ -4,6 +4,7 @@ from system_hotkey import SystemHotkey
 
 from . import save_manager
 
+
 def main():
     manager = save_manager.SaveManager()
 

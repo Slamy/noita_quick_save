@@ -1,5 +1,6 @@
 import os
 import time
+from datetime import datetime
 from pathlib import Path
 
 import psutil
@@ -8,6 +9,10 @@ PROTON_NOITA_CWD_TO_SAVE_00 = "../../compatdata/881100/pfx/drive_c/" \
                               "users/steamuser/AppData/LocalLow/Nolla_Games_Noita/save00"
 
 SECONDS_TO_WAIT_FOR_NOITA = 25
+
+
+def time_string():
+    return datetime.now().strftime("%Y_%m_%d-%H_%M_%S")
 
 
 def find_process(name):

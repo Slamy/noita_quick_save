@@ -1,7 +1,6 @@
 import os
 import platform
 import shutil
-from datetime import datetime
 from pathlib import Path
 
 from . import util
@@ -55,8 +54,8 @@ class SaveManager:
 
     def backup_to_save_zip(self):
         # uncompressed save game - active
-        time_string = datetime.now().strftime("%Y_%m_%d-%I_%M_%S_%p")
-        backup_name = f"noita_backup_{time_string}"
+
+        backup_name = f"noita_backup_{util.time_string()}"
         backup_path = Path(self.backup_folder_path).joinpath(backup_name)
 
         print(f"Archiving {self.noita_save00_path} to {backup_path}")
@@ -73,8 +72,7 @@ class SaveManager:
 
     def restore_from_save_zip(self):
         # Create backup of current save folder to avoid destruction by corrupted archives
-        timestamp = datetime.now().strftime("%Y_%m_%d-%I_%M_%S_%p")
-        backup_path = Path(self.noita_save00_path).joinpath(f"../{timestamp}.bak").resolve()
+        backup_path = Path(self.noita_save00_path).joinpath(f"../{util.time_string()}.bak").resolve()
         print(f"Moving {self.noita_save00_path} to {backup_path} to be safe")
         shutil.move(self.noita_save00_path, backup_path)
 
