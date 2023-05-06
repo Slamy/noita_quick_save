@@ -37,6 +37,14 @@ Because of certain dependencies (system_hotkey), python 3.9 must be used at the 
     pyenv global 3.9
     pip install -r requirements.txt
 
+## Installation into local python environment
+
+    pip install .
+
+After doing so, one can just call the application via
+
+    noita_quick_save
+
 ## Building single binary for easier distribution
 
 This is based on [pyinstaller](https://pyinstaller.org/en/stable/)

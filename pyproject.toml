@@ -1,0 +1,26 @@
+[project]
+name = "noitaquicksave_slamy"
+version = "0.1.0"
+description = "Portable noita quick save and auto restarter"
+authors = [
+  { name="André Zeps", email="andre.zeps@googlemail.com" },
+]
+readme = "README.md"
+requires-python = "==3.9.*"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Slamy/noita_quick_save"
+"Bug Tracker" = "https://github.com/Slamy/noita_quick_save/issues"
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+noita_quick_save = "noita_quick_save.__main__:main"

@@ -2,7 +2,7 @@ import win32con
 import win32gui
 import win32process
 
-import util
+from . import util
 
 
 # Stolen from https://github.com/k-Knight/NoitaSaveScummer

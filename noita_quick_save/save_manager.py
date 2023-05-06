@@ -4,12 +4,12 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
-import util
+from . import util
 
 if platform.system() == "Windows":
-    import util_windows as os_util
+    from . import util_windows as os_util
 else:
-    import util_linux as os_util
+    from . import util_linux as os_util
 
 """
 Based on the works of
